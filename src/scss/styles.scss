@@ -1,11 +1,133 @@
-$bgColor: green;
-$txtColor: white;
+$bgColorHero: #ff8482;
+$bgColorOne: #FFF2DD;
+$bgColorTwo: #ffffff;
+$bgColorFooter: #BE6361;
+$bgColorCopyright: #A85756;
 
 body {
-    color: $txtColor;
-    background-color: $bgColor;
+    font-family: "DM Sans";
+    color:white;
+    margin:0;
+    padding:0;
+}
+.section{
+    height: 768px;
+    width: 100%;
 }
 
-.oke{
-    color: black;
+#hero{
+    background-color: $bgColorHero;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 3%;
+}
+#logo{
+    font-family: "Alfa Slab One";
+    font-size: 40px;
+}
+#burger{
+    display: none;
+    cursor: pointer;
+}
+
+//HAMBURGER MENU
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    border-radius: 20%;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+//ANIMATION VOOR HAMBURGER MENU X
+.change .bar1{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2{
+    opacity: 0;
+} 
+.change .bar3{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+// LINKS VOOR NAVIGATIE
+#navigation a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+}
+#signup{
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid rgba(255,255,255,0.29);
+}
+@media only screen and (max-width: 800px) {
+    #signup{
+        display: none;
+    }
+    #burger{
+        display: block;
+    }
+    #navigation{
+        display: none;
+        width: 100%;
+    }
+    #navigation.show{
+        display: flex;
+        flex-direction: column;
+    }
+    
+  }
+
+
+#section_one{
+    background-color: $bgColorOne;
+}
+#section_two{
+    background-color: $bgColorTwo;
+}
+#section_three{
+    background-color: $bgColorOne;
+}
+#callToAction{
+    height: 448px;
+    width: 100%;
+    background: src('dis');
+}
+#footer{
+    height: 368px;
+    width:100%;
+    background-color: $bgColorFooter;
+}
+#copyright{
+    justify-content: flex-end;
+    height: 80px;
+    width: 100%;
+    background-color: $bgColorCopyright;
+}
+
+//PRINT 
+@media print{
+    body{
+        background: transparent;
+        color: black;
+    } 
 }
