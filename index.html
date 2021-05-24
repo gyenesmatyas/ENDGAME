@@ -4,15 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="dist/js/javascript.js"></script>
     <title>ENDGAME INIT</title>
 </head>
 <body>
-    <h1>ENDGAME oke
-        
-    </h1>  
-    <img src="dist/images/kaas blokjes-500x500.webp">  
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                LOGO
+            </div>
+            <div id="burger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="navigation">
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+            <div id="signup">
+                Signup
+            </div>
+        </div>
+        <div class="container" id="containerSubmit">
+            <div class="containerLeft">
+                <h5>Delectus instructior</h5>
+                <h1>Vide legimus consectetuer</h1>
+                <form action="#">
+                    <input type="email" id="inputEmail" name="email" placeholder="Email"><br>
+                    <input type="submit" id="submitEmail" value="Submit">
+                </form> 
+            </div>
+            <div class="containerRight">
+                <picture>
+                    <source srcset="dist/images/marginalia-productive-work.webp" media="(min-width: 800px)">
+                    <img src="dist/images/marginalia-productive-work.webp" alt="Person working productive on computer with books around her">
+                </picture>
+            </div>
+        </div>
+        <div class="container" id="containerExplore">
+            <div class="containerLeft">
+                <picture>
+                    <source srcset="dist/images/marginalia-productive-work.webp" media="(min-width: 800px)">
+                    <img src="dist/images/marginalia-unsubscribed.webp" alt="Person working on laptop behind desk">
+                </picture>
+            </div>
+            <div class="containerRight">
+                <h5>Dico nullam</h5>
+                <h1>Vim graeco principes</h1>
+                <p>Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.</p>
+            </div>
+        </div> 
+        <div class="container" id="containerGetStarted">
+            <div class="containerLeft">
+                <picture>
+                    <source srcset="dist/images/marginalia-productive-work.webp" media="(min-width: 800px)">
+                    <img src="dist/images/marginalia-unsubscribed.webp" alt="Person working on laptop behind desk">
+                </picture>
+            </div>
+            <div class="containerRight">
+                <h5>Dico nullam</h5>
+                <h1>Vim graeco principes</h1>
+                <p>Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.</p>
+            </div>
+        </div> 
+    </div> 
 </body>
+<script src="dist/js/javascript.js"></script>
 </html>
