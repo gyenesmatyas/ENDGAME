@@ -3,12 +3,24 @@ $bgColorOne: #FFF2DD;
 $bgColorTwo: #ffffff;
 $bgColorFooter: #BE6361;
 $bgColorCopyright: #A85756;
+$black: #333333;
 
 body {
     font-family: "DM Sans";
     color:white;
     margin:0;
     padding:0;
+}
+h5{
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+h1{
+    margin-top: 4%;
+    font-family: "Alfa Slab One";
+    font-weight: 500;
+    font-size: 5vw;
+    line-height: 1.1;
 }
 #header{
     background-color: $bgColorHero;
@@ -21,7 +33,7 @@ body {
 }
 #logo{
     font-family: "Alfa Slab One";
-    font-size: 40px;
+    font-size: 5vh;
 }
 #burger{
     display: none;
@@ -50,7 +62,7 @@ body {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-
+// NAVIGATIE
 #navigation{
     display: flex;
     flex-direction: row;
@@ -58,14 +70,14 @@ body {
     justify-content: center;
     padding: 0;
 }
-// LINKS VOOR NAVIGATIE
 #navigation a{
     color: white;
     text-decoration: none;
-    padding: 20px;
-    font-size: 16px;
+    padding: 1vw;
+    font-size: 2vh;
 }
 #signup{
+    font-size: 2vh;
     padding: 10px;
     padding-left: 5%;
     padding-right: 5%;
@@ -80,40 +92,28 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
-    margin-bottom: -5%;
+    //border: 1px solid black;
 }
 .containerLeft{
     width: 50%;
-    border: 1px dotted black;
+    //border: 1px dotted black;
 }
 .containerRight{
     width: 50%;
 
-    border: 1px dotted black;
+    //border: 1px dotted black;
 }
-.containerRight img{
+.containerRight .bigImg{
     margin-left: -7%;
     width: 114%;
 }
-.containerLeft img{
+.containerLeft .bigImg{
     margin-left: -7%;
     width: 114%;
-}
-
-#containerSubmit h5{
-    margin-bottom: 0;
-    margin-top: 10%;
-    font-size: 1vw;
-}
-#containerSubmit h1{
-    margin-top: 2%;
-    font-family: "Alfa Slab One";
-    font-weight: 500;
-    font-size: 5vw;
 }
 
 //CONTAINER SPECIFIEK
+//CONTAINER SUBMIT
 #containerSubmit{
     background-color: $bgColorHero;
 }
@@ -127,6 +127,9 @@ body {
 }
 #containerSubmit .containerLeft{
     align-self: start;
+}
+#containerSubmit .containerLeft h5{
+    margin-top: 20%;
 }
 #inputEmail{
     padding-left: 2%;
@@ -144,13 +147,102 @@ body {
     font-family: "DM Sans";
 
 }
-
+//CONTAINER EXPLORE
 #containerExplore{
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: $bgColorOne;
 }
+#containerExplore .containerLeft{
+    padding: 0;
+}
+#containerExplore .containerRight{
+    margin-left: 7%;
+}
+#containerExplore .containerRight h5{
+    color: #BE6361;
+    margin: 0%;
+}
+#containerExplore .containerRight h1{
+    color: $black;
+    font-size: 9vh;
+}
+#containerExplore .containerRight p{
+    color: $black;
+    font-size: 1.5vw;
+}
+.button{
+    font-family: "DM Sans";
+    text-decoration: none;
+    padding: 2% 8%;
+    border-radius: 5%;
+}
+#btnExplore{
+    background-color: #BE6361;
+    color: white;
+}
+//LEARN MORE
+#containerLearnMore{
+    padding:  0% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 700px;
+}
+
+
+//GETTING STARTED
 #containerGetStarted{
+    color: $black;
     background-color: $bgColorOne;
 }
+#containerGetStarted h1{
+    font-size: 5vh;
+}
+#containerGetStarted h5{
+    color: #BE6361;
+}
+#containerGetStarted ul{
+    padding: 0;
+}
+#containerGetStarted ul li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5vh;
+    margin-top: 1%;
+}
+.symbol{
+    height: 4vh;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+#btnGetStarted{
+    border: 1px solid #BE6361;
+    border-bottom: 1%;
+    color: #BE6361;
+}
+#containerGetStarted .bigImg{
+    padding-top: 10%;
+}
+//banner
+#banner{
+    //flex
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // achtergrond
+    background-image: url(/dist/images/alethiekpiste.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
 @media only screen and (max-width: 800px) {
     //RESPONSIVE NAVIGATION
     #signup{
@@ -176,17 +268,35 @@ body {
         margin-right: 0;
         width: 100%;
     }
-    .containerRight img, .containerLeft img{
+    .containerRight .bigImg, .containerLeft .bigImg{
         margin-left: 0;
         width: 100%;
     }
 
     //SPECIFIEKE CONTAINERS
-    #containerSubmit h5{
+    #containerSubmit h5, #containerExplore .containerRight h5, #containerExplore .containerRight p{
         font-size: 5vw;
     }
     #containerSubmit h1{
         font-size: 10vw;
+    }
+    #containerExplore .containerRight{
+        margin-left: 0%;
+    }
+    #containerExplore .containerRight h1, #containerGetStarted h1{
+        font-size: 9vh;
+    }
+
+    //
+    #containerGetStarted .bigImg{
+        padding-top: 0;
+    }
+    #containerGetStarted ul li{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 3vh;
+        margin-top: 1%;
     }
     
 }

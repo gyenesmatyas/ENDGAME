@@ -76,13 +76,13 @@ function watch(){
             baseDir: './'
         }
     });
-    
     gulp.watch('./src/scss/*.scss',compilescss);
     gulp.watch('src/js/*.js',jsmin);
     gulp.watch('src/images/*.{jpg,png}',optimizeImg);
     gulp.watch('dist/images/*.{jpg,png}',webpImg);
     gulp.watch('./**/*.html').on('change', browserSync.reload); 
 }
+
 
 exports.compilescss = compilescss;
 exports.jsmin = jsmin;
