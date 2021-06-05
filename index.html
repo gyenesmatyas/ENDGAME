@@ -10,8 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>ENDGAME INIT</title>
 </head>
-<body>
-    <div id="wrapper">
+    <body>
         <div id="header">
             <div id="logo">
                 LOGO
@@ -27,17 +26,15 @@
                 <a href="#">Blog</a>
                 <a href="#">Contact</a>
             </div>
-            <div id="signup">
-                Signup
-            </div>
+            <a class="button" id="btnSignup" href="#">Signup</a>
         </div>
         <div class="container" id="containerSubmit">
             <div class="containerLeft">
                 <h5>Delectus instructior</h5>
                 <h1>Vide legimus consectetuer</h1>
                 <form action="#">
-                    <input type="email" id="inputEmail" name="email" placeholder="Email"><br>
-                    <input type="submit" id="submitEmail" value="Submit">
+                    <input type="email" id="inputEmail" name="email" placeholder="Email">
+                    <input type="submit" class="button" id="btnSubmit" value="Submit">
                 </form> 
             </div>
             <div class="containerRight">
@@ -56,35 +53,44 @@
             </div>
             <div class="containerRight">
                 <h5>Dico nullam</h5>
-                <h1>Vim graeco principes</h1>
-                <p>Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.</p>
+                <h2>Vim graeco principes</h2>
+                <p class="textBig">Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.</p>
                 <a class="button" id="btnExplore" href="#">Explore</a>
             </div>
         </div> 
-        <div id="containerLearnMore">
+        <div class="container" id="containerLearnMore">
             <h5>Nominavi suavitate</h5>
-            <h1>Offendit persecuti</h1>
-            <p>Eu pro ludus dignissim. Eos debet molestiae constituto ne, quo consul interesset ei, cotidieque theophrastus ea his.</p>
-            <img src="dist/images/graph.webp" alt="a graph">
-            <h4>Possim</h4>
-            <p class="greyText">An animal assentior nam, sed qualisque deterruisset ea qui melius erroribus</p>
-            <img src="dist/images/briefcase.webp" alt="a briefcase">
-            <h4>Vivendo</h4>
-            <p class="greyText">Assum ubique quodsi sea ad partem vocent vel, ius id viris utinam</p>
-            <img src="dist/images/file.webp" alt="a file">
-            <h4>Deterruisset</h4>
-            <p class="greyText">Nam natum volutpat eu natum elitr vel te id qui purto dicit</p>
+            <h2>Offendit persecuti</h2>
+            <p class="textBig">Eu pro ludus dignissim. Eos debet molestiae constituto ne, quo consul interesset ei, cotidieque theophrastus ea his.</p>
+            <div id="articles">
+                <article>
+                    <img src="dist/images/graph.webp" alt="a graph">
+                    <h4>Possim</h4>
+                    <p class="greyText">An animal assentior nam, sed qualisque deterruisset ea qui melius erroribus</p>
+                </article>
+                <article>
+                    <img src="dist/images/briefcase.webp" alt="a briefcase">
+                    <h4>Vivendo</h4>
+                    <p class="greyText">Assum ubique quodsi sea ad partem vocent vel, ius id viris utinam</p>
+                </article>
+                <article>
+                    <img src="dist/images/file.webp" alt="a file">
+                    <h4>Deterruisset</h4>
+                    <p class="greyText">Nam natum volutpat eu natum elitr vel te id qui purto dicit</p>
+                </article>
+            </div>
+            <a class="button" id="btnLearnMore" href="#">Learn more</a>
         </div>
         <div class="container" id="containerGetStarted">
             <div class="containerLeft">
                 <h5>Mel solum</h5>
-                <h1>Mazim iudico</h1>
+                <h2>Mazim iudico</h2>
                 <ul>
-                    <li><img class="symbol" src="dist/images/heart.webp" alt="heart symbol">Bonorum minimum et sit tritani te, qui feugait electram</li>
-                    <li><img class="symbol" src="dist/images/star.webp" alt="star symbol">Cum ei assum tation homero mel corpora consectetuer</li>
-                    <li><img class="symbol" src="dist/images/rocket.webp" alt="rocket symbol">At per assum dicit verterem veri eripuit honestatis</li>
-                    <li><img class="symbol" src="dist/images/broadcast.webp" alt="broadcast symbol">Lorem deterruisset ea vis expetenda has ex</li>
-                    <li><img class="symbol" src="dist/images/user.webp" alt="user symbol">Usu eu hinc lorem inciderint minim movet quodsi</li>
+                    <li class="text"><img class="symbol" src="dist/images/heart.webp" alt="heart symbol">Bonorum minimum et sit tritani te, qui feugait electram</li>
+                    <li class="text"><img class="symbol" src="dist/images/star.webp" alt="star symbol">Cum ei assum tation homero mel corpora consectetuer</li>
+                    <li class="text"><img class="symbol" src="dist/images/rocket.webp" alt="rocket symbol">At per assum dicit verterem veri eripuit honestatis</li>
+                    <li class="text"><img class="symbol" src="dist/images/broadcast.webp" alt="broadcast symbol">Lorem deterruisset ea vis expetenda has ex</li>
+                    <li class="text"><img class="symbol" src="dist/images/user.webp" alt="user symbol">Usu eu hinc lorem inciderint minim movet quodsi</li>
                 </ul>
                 <a class="button" id="btnGetStarted" href="#">Get started</a>
             </div>
@@ -97,9 +103,44 @@
         </div> 
         <div id="banner">
             <h5>Eos lobortis inimicus</h5>
-            <h2>Pro ad ubique erroribus <br>in modo mutat sed</h2>
+            <h2>Pro ad ubique erroribus in<br>modo mutat sed</h2>
+            <a class="button" id="btnTryNow" href="#">Try now</a>
         </div>
-    </div> 
-</body>
+        <footer>
+            <div id="footerLeft">
+                <h3>LOGO</h3>
+                <p class="textBig">Sit alii tantas viderer no. An mel nostrum appareat. Ad consul facilis est. Vix habeo scaevola percipitur ne, qui noster abhorreant ne.</p>
+                <div id="socials">
+                    <img src="dist/images/twitter.webp" alt="Twitter">
+                    <img src="dist/images/facebook.webp" alt="Facebook">
+                    <img src="dist/images/instagram.webp" alt="Instagram">
+                </div>
+            </div>
+            <div class="footerColumn"> 
+                <p class="text">Habeo</p>
+                <p class="greyText">Scaevola</p>
+                <p class="greyText">Aliquam</p>
+                <p class="greyText">Noluisse</p>
+                <p class="greyText">Epicuri</p>
+                <p class="greyText">Detracto</p>                </div>
+            <div class="footerColumn">
+                <p class="text">Indoctum</p>
+                <p class="greyText">Fierent</p>
+                <p class="greyText">Pericula</p>
+                   <p class="greyText">Veniam</p>                    <p class="greyText">Epicuri</p>
+                <p class="greyText">Mutat</p>
+            </div>
+            <div class="footerColumn">
+                <p class="text">Quaestio</p>
+                <p class="greyText">Erroribus</p>
+                <p class="greyText">Modus</p>
+                <p class="greyText">Volumus</p>
+                <p class="greyText">Abhorreant</p>                    <p class="greyText">Mentitum</p>
+            </div>
+        </footer>
+        <div id="copyright">
+            <p class="greyText">© LOGO, 2019. All rights reserved. Created by Laaqiq.</p>
+        </div>
+    </body>
 <script src="dist/js/javascript.js"></script>
 </html>

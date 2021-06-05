@@ -1,9 +1,12 @@
-$bgColorHero: #ff8482;
-$bgColorOne: #FFF2DD;
-$bgColorTwo: #ffffff;
-$bgColorFooter: #BE6361;
+$primaryBackgroundColor: #ff8482;
+$secondaryBackgroundColor: #FFF2DD;
+$white: #ffffff;
+$primaryColor: #BE6361;
 $bgColorCopyright: #A85756;
 $black: #333333;
+
+
+
 
 body {
     font-family: "DM Sans";
@@ -11,10 +14,9 @@ body {
     margin:0;
     padding:0;
 }
-h5{
-    margin-bottom: 0;
-    font-size: 1.5vw;
-}
+
+
+//HEADINGS
 h1{
     margin-top: 4%;
     font-family: "Alfa Slab One";
@@ -22,25 +24,128 @@ h1{
     font-size: 5vw;
     line-height: 1.1;
 }
+h2{
+    font-family: "Alfa Slab One";
+    font-size: 4vw;
+    font-weight: 300;
+    color: $black;
+    margin: 0%;
+    line-height: 1.1;
+}
+h3{
+    font-family: "Alfa Slab One";
+    font-size: 3vw;
+    margin: 0;
+}
+h4{
+    font-family: "DM Sans";
+    font-size: 1.6vw;
+}
+h5{
+    font-family: "DM Sans";
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+
+//KNOPPEN
+.button{
+    font-family: "DM Sans";
+    text-decoration: none;
+    color: $white;
+    padding: 2% 10%;
+    border-radius: 5%;
+}
+#btnSignup{
+    padding: 1% 5%;
+    border: 2px solid rgba(255,255,255,0.29);
+}
+#btnSubmit{
+    color: $black;
+    background-color: white;
+    margin-left:5%;
+}
+#btnExplore{
+    background-color: $primaryColor;
+    color: white;
+}
+#btnLearnMore{
+    background-color: $primaryColor;
+    color: white;
+    padding: 1.2% 4%;
+    margin-top: 3%;
+}
+#btnGetStarted{
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+}
+#btnTryNow{
+    padding: 1% 5%;
+    color: $black;
+    background-color: $white;
+    border: 2px solid $black;
+    margin-bottom: 5%;
+}
+
+
+// TEKST
+.textBig{
+    color: $black;
+    font-size: 1.4vw;
+    font-weight: 2;
+    line-height: 1.5;
+}
+.text{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5w;
+    margin-top: 1%;
+}
+.greyText{
+    opacity: 50%;
+}
+
+
+// DE CONTAINER OPBOUW 
+.container{
+    padding:  0% 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerLeft{
+    width: 50%;
+}
+.containerRight{
+    width: 50%;
+}
+.bigImg{
+    width: 114%;
+    margin: -6%;
+}
+
+
+//DE HEADER
 #header{
-    background-color: $bgColorHero;
+    background-color: $primaryBackgroundColor;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 2%;
     padding-left: 10%;
     padding-right: 10%;
 }
 #logo{
     font-family: "Alfa Slab One";
-    font-size: 5vh;
+    font-size: 5vw;
 }
 #burger{
     display: none;
     cursor: pointer;
 }
-
-//HAMBURGER MENU
 .bar1, .bar2, .bar3{
     width: 35px;
     height: 5px;
@@ -49,6 +154,219 @@ h1{
     margin: 6px 0;
     transition: 0.4s;
 }
+#navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+#navigation a{
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//CONTAINER SPECIFIEK
+// SUBMIT
+#containerSubmit{
+    background-color: $primaryBackgroundColor;
+}
+#containerSubmit form{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 5vw;
+}
+#containerSubmit .containerLeft{
+    align-self: center;
+    margin-top: -10%;
+}
+
+#inputEmail{
+    padding-left: 2%;
+    width: 70%;
+    height: 50%;
+    border: none;
+    font-family: "DM Sans";
+}
+
+
+
+// EXPLORE
+#containerExplore{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: $secondaryBackgroundColor;
+}
+#containerExplore .containerLeft{
+    padding: 0;
+}
+#containerExplore .containerRight{
+    margin-left: 7%;
+}
+#containerExplore .containerRight h5{
+    color: $primaryColor;
+    margin: 0%;
+}
+#containerExplore .containerRight h2{
+    color: $black;
+}
+
+
+// LEARN MORE
+#containerLearnMore{
+    padding:  0% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    text-align: center;
+    padding-bottom: 5%;
+}
+#containerLearnMore .textBig{
+    width: 50%;
+}
+#articles{
+    display: flex;
+    flex-direction: row;
+    padding: 0 10%;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+#articles img{
+    padding: 10% 0;
+    height: 8vw;
+    width: auto;
+}
+article{
+    width: 30%;
+}
+
+
+// GETTING STARTED
+#containerGetStarted{
+    color: $black;
+    background-color: $secondaryBackgroundColor;
+}
+#containerGetStarted h5, #containerLearnMore h5{
+    color: $primaryColor;
+}
+#containerGetStarted ul{
+    padding: 0;
+    margin-top: 5%;
+}
+.symbol{
+    height: 2vw;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+#containerGetStarted .bigImg{
+    padding-top: 10%;
+}
+
+
+// BANNER
+#banner{
+    //flex
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    // achtergrond
+    background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5) ), url(/dist/images/alethiekpiste.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#banner h2{
+    color: $white;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+#banner h5{
+    margin-top: 5%;
+}
+
+
+
+
+// FOOTER
+footer{
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    padding: 3% 0;
+}
+footer .textBig{
+    color: $white;
+}
+#footerLeft{
+    margin: 0 10%;
+    width: 32%;
+}
+#socials img{
+    margin-right: 3%;
+}
+.footerColumn{
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+
+
+// COPYRIGHT
+#copyright{
+    background-color: $bgColorCopyright;
+    width: 100%;
+
+}
+#copyright p{
+    padding: 2%;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ANIMATIONS
 //ANIMATION VOOR HAMBURGER MENU X
 .change .bar1{
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -62,190 +380,83 @@ h1{
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-// NAVIGATIE
-#navigation{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}
-#navigation a{
-    color: white;
-    text-decoration: none;
-    padding: 1vw;
-    font-size: 2vh;
-}
-#signup{
-    font-size: 2vh;
-    padding: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
-    border: 2px solid rgba(255,255,255,0.29);
-}
 
 
-// 
-.container{
-    padding:  0% 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    //border: 1px solid black;
-}
-.containerLeft{
-    width: 50%;
-    //border: 1px dotted black;
-}
-.containerRight{
-    width: 50%;
-
-    //border: 1px dotted black;
-}
-.containerRight .bigImg{
-    margin-left: -7%;
-    width: 114%;
-}
-.containerLeft .bigImg{
-    margin-left: -7%;
-    width: 114%;
-}
-
-//CONTAINER SPECIFIEK
-//CONTAINER SUBMIT
-#containerSubmit{
-    background-color: $bgColorHero;
-}
-#containerSubmit form{
-    width: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    height: 5vh;
-}
-#containerSubmit .containerLeft{
-    align-self: start;
-}
-#containerSubmit .containerLeft h5{
-    margin-top: 20%;
-}
-#inputEmail{
-    padding-left: 2%;
-    width: 70%;
-    height: 100%;
-    border: none;
-    font-family: "DM Sans";
-}
-#submitEmail{
-    margin-left:5%;
-    border-radius: 3%;
-    background-color: white;
-    width: 25%;
-    height: 110%;
-    font-family: "DM Sans";
-
-}
-//CONTAINER EXPLORE
-#containerExplore{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: $bgColorOne;
-}
-#containerExplore .containerLeft{
-    padding: 0;
-}
-#containerExplore .containerRight{
-    margin-left: 7%;
-}
-#containerExplore .containerRight h5{
-    color: #BE6361;
-    margin: 0%;
-}
-#containerExplore .containerRight h1{
-    color: $black;
-    font-size: 9vh;
-}
-#containerExplore .containerRight p{
-    color: $black;
-    font-size: 1.5vw;
-}
-.button{
-    font-family: "DM Sans";
-    text-decoration: none;
-    padding: 2% 8%;
-    border-radius: 5%;
-}
-#btnExplore{
-    background-color: #BE6361;
-    color: white;
-}
-//LEARN MORE
-#containerLearnMore{
-    padding:  0% 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    height: 700px;
-}
 
 
-//GETTING STARTED
-#containerGetStarted{
-    color: $black;
-    background-color: $bgColorOne;
-}
-#containerGetStarted h1{
-    font-size: 5vh;
-}
-#containerGetStarted h5{
-    color: #BE6361;
-}
-#containerGetStarted ul{
-    padding: 0;
-}
-#containerGetStarted ul li{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    font-size: 2.5vh;
-    margin-top: 1%;
-}
-.symbol{
-    height: 4vh;
-    padding-right: 5%;
-    padding-bottom: 5%;
-}
-#btnGetStarted{
-    border: 1px solid #BE6361;
-    border-bottom: 1%;
-    color: #BE6361;
-}
-#containerGetStarted .bigImg{
-    padding-top: 10%;
-}
-//banner
-#banner{
-    //flex
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    // achtergrond
-    background-image: url(/dist/images/alethiekpiste.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
 
+
+
+
+
+
+
+
+
+
+
+// RESPONSIVE
 @media only screen and (max-width: 800px) {
-    //RESPONSIVE NAVIGATION
-    #signup{
+    // ALGEMEEN
+    h1{
+        font-size: 12vw;
+        hyphens: auto;
+    }
+    h2{
+        font-size: 10vw;
+    }
+    h3{
+        margin-top: 10%;
+        font-size: 10vw;
+    }
+    h4{
+        font-size: 7vw;
+        margin: 0;
+    }
+    h5{
+        font-size: 5vw;
+        padding-bottom: 3%;
+    }
+    .text{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 4.5vw;
+        margin-top: 2%;
+        line-height: 1.4;
+    }
+    .textBig{
+        font-size: 5vw;
+    }
+    .greyText{
+        margin-top: 0;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .containerRight, .containerLeft{
+        width: 100%;
+    }
+    .symbol{
+        width: 6vw;
+        height: 6vw;
+    }
+    .bigImg{
+        width: 100%;
+        margin: 0;
+    }
+
+
+    // NAVIGATION
+    #header{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    #logo{
+        font-size: 12vw;
+    }
+    #btnSignup{
         display: none;
     }
     #burger{
@@ -255,57 +466,92 @@ h1{
         display: none;
         width: 100%;
     }
+    #navigation a{
+        font-size: 6vw;
+    }
     #navigation.show{
         display: flex;
         flex-direction: column;
     }
 
-    //RESPONSIVE CONTAINERS
+
+    // SUBMIT
     .container{
+        padding: 0 3.5%;
+    }
+    #containerSubmit .containerLeft{
+        margin-top: 0;
+    }
+    #containerSubmit form{
+        height: 1%;
         flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
     }
-    .containerRight, .containerLeft{
-        margin-right: 0;
+    #inputEmail{
+        padding-left: 2%;
+        margin-bottom: 4%;
         width: 100%;
+        height: 5vw;
     }
-    .containerRight .bigImg, .containerLeft .bigImg{
-        margin-left: 0;
-        width: 100%;
+    #btnSubmit{
+        margin: 0;
     }
 
-    //SPECIFIEKE CONTAINERS
-    #containerSubmit h5, #containerExplore .containerRight h5, #containerExplore .containerRight p{
-        font-size: 5vw;
-    }
-    #containerSubmit h1{
-        font-size: 10vw;
-    }
+
+    // EXPLORE
     #containerExplore .containerRight{
-        margin-left: 0%;
-    }
-    #containerExplore .containerRight h1, #containerGetStarted h1{
-        font-size: 9vh;
+        margin-left: 0;
+        padding-bottom: 10%;
     }
 
-    //
-    #containerGetStarted .bigImg{
-        padding-top: 0;
+
+    // LEARN MORE
+    #containerLearnMore .textBig{
+        width: 90%;
     }
-    #containerGetStarted ul li{
-        list-style-type: none;
+    #articles{
         display: flex;
-        flex-direction: row;
-        font-size: 3vh;
-        margin-top: 1%;
+        flex-direction: column;    
     }
-    
-}
+    #articles img{
+        height: 20vw;
+        width: auto;
+    }
+    article{
+        width: 100%;
+    }
+    #btnLearnMore{
+        padding: 3% 10%;
+        margin-bottom: 10%;
+    }
 
-//PRINT 
-@media print{
-    body{
-        background: transparent;
-        color: black;
+
+    // BANNER
+    #banner h2{
+        padding: 0 1%;
+
+    }
+
+
+    // FOOTER
+    footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #footerLeft{
+        width: 90%;
+        margin-left: 3%;
+    }
+    .footerColumn{
+        margin-top: 10%;
+        margin-left: 3%;
+        width: 90%;
+    }
+
+    // COPYRIGHT
+    #copyright p{
+        padding: 10%;
     } 
 }
 
